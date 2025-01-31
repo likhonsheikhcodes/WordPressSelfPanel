@@ -3,63 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WordPress Self Panel</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>WordPress Self Panel - Revolutionary Web Management</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating-element {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #4158D0, #C850C0, #FFCC70);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto px-4 py-8">
-        <header class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-green-600 mb-2">WordPress Self Panel</h1>
-            <p class="text-xl text-gray-600">Modern WordPress Management Tool for Termux</p>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900">
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <h1 class="text-6xl font-extrabold mb-4 gradient-text">
+                WordPress Self Panel
+            </h1>
+            <p class="text-2xl text-gray-600 max-w-3xl mx-auto">
+                Revolutionizing WordPress Management with Open-Source Innovation
+            </p>
         </header>
 
-        <main>
-            <section class="bg-white rounded-lg shadow-md p-6 mb-8">
-                <h2 class="text-2xl font-semibold mb-4">What is WordPress Self Panel?</h2>
-                <p class="text-gray-700 mb-4">
-                    WordPress Self Panel is a powerful, user-friendly tool designed to simplify WordPress management on Termux. It provides a comprehensive set of features for efficient website administration, all accessible through an intuitive interface.
+        <!-- Hero Section -->
+        <section class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+                <h2 class="text-4xl font-bold mb-6">
+                    Empower Your WordPress Journey
+                </h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    A cutting-edge, free, open-source solution that transforms how you manage and deploy WordPress sites.
                 </p>
-            </section>
+                <div class="space-x-4">
+                    <a href="#" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition">
+                        Get Started
+                    </a>
+                    <a href="#" class="border border-blue-500 text-blue-500 px-6 py-3 rounded-full hover:bg-blue-500 hover:text-white transition">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <img src="https://via.placeholder.com/500x400" alt="WordPress Management" class="floating-element">
+            </div>
+        </section>
 
-            <section class="bg-white rounded-lg shadow-md p-6 mb-8">
-                <h2 class="text-2xl font-semibold mb-4">Key Features</h2>
-                <ul class="list-disc list-inside text-gray-700">
-                    <li>Easy installation and setup on Termux</li>
-                    <li>Intuitive dashboard for website management</li>
-                    <li>Built-in file manager with Tiny File Manager integration</li>
-                    <li>Database management tools</li>
-                    <li>SSL certificate management</li>
-                    <li>Performance monitoring and optimization</li>
-                    <li>Security tools and settings</li>
-                    <li>Automatic updates for WordPress core, plugins, and themes</li>
-                    <li>Email account management</li>
-                    <li>Plugin and theme installation directly from the dashboard</li>
-                    <li>Comprehensive logging system</li>
-                    <li>Task management with undo/redo functionality</li>
-                    <li>CLI interface for advanced users</li>
-                </ul>
-            </section>
+        <!-- Features Section -->
+        <section class="mb-24">
+            <h2 class="text-4xl font-bold text-center mb-12">
+                Revolutionary Features
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg feature-card">
+                    <i class="fas fa-rocket text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">One-Click Deployment</h3>
+                    <p class="text-gray-600">
+                        Launch WordPress sites instantly with our streamlined deployment system.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg feature-card">
+                    <i class="fas fa-shield-alt text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Advanced Security</h3>
+                    <p class="text-gray-600">
+                        Comprehensive protection with real-time threat detection and prevention.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg feature-card">
+                    <i class="fas fa-tachometer-alt text-4xl text-purple-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-4">Performance Optimized</h3>
+                    <p class="text-gray-600">
+                        Lightweight architecture ensuring maximum WordPress performance.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-            <section class="bg-white rounded-lg shadow-md p-6 mb-8">
-                <h2 class="text-2xl font-semibold mb-4">Installation</h2>
-                <p class="text-gray-700 mb-4">To install WordPress Self Panel on Termux, run the following command:</p>
-                <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto">
-wget -O install.sh https://raw.githubusercontent.com/likhonsheikhcodes/WordPressSelfPanel/main/install.sh && bash install.sh
-                </pre>
-            </section>
+        <!-- Community Section -->
+        <section class="text-center bg-white p-16 rounded-xl shadow-lg">
+            <h2 class="text-4xl font-bold mb-8">
+                Join Our Global Community
+            </h2>
+            <div class="flex justify-center space-x-8">
+                <a href="#" class="text-5xl hover:text-gray-700 transition">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="text-5xl hover:text-blue-700 transition">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="#" class="text-5xl hover:text-blue-400 transition">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </section>
 
-            <section class="bg-white rounded-lg shadow-md p-6">
-                <h2 class="text-2xl font-semibold mb-4">Get Started</h2>
-                <p class="text-gray-700 mb-4">
-                    After installation, access your WordPress Self Panel by opening a web browser and navigating to <code class="bg-gray-200 px-2 py-1 rounded">http://localhost:8080</code>. Log in with your credentials to start managing your WordPress site with ease!
-                </p>
-            </section>
-        </main>
-
-        <footer class="text-center mt-8 text-gray-600">
-            <p>&copy; 2023 WordPress Self Panel. Created by Likhon Sheikh</p>
+        <!-- Footer -->
+        <footer class="mt-16 text-center text-gray-600">
+            <p>&copy; 2024 WordPress Self Panel. Open Source & Free Forever.</p>
         </footer>
     </div>
+
+    <!-- Optional JavaScript for Interactivity -->
+    <script>
+        // Simple scroll-triggered animations
+        window.addEventListener('scroll', function() {
+            const features = document.querySelectorAll('.feature-card');
+            features.forEach((feature, index) => {
+                const position = feature.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.5;
+                
+                if (position < screenPosition) {
+                    feature.style.opacity = 1;
+                    feature.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
