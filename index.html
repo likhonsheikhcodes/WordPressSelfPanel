@@ -2,84 +2,137 @@
 <html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
-    <title>WordPress Self Panel - Revolutionary Open-Source WordPress Management</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WordPress Self Panel: Free, open-source WordPress management tool. One-click deployment, advanced security, multi-platform support.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
     
-    <!-- Critical CSS -->
+    <!-- Primary Meta Tags -->
+    <title>WordPress Self Panel - Revolutionary Open-Source WordPress Management</title>
+    <meta name="title" content="WordPress Self Panel - Revolutionary Open-Source WordPress Management">
+    <meta name="description" content="Free, open-source WordPress management tool with one-click deployment, advanced security, multi-platform support. Transform your WordPress experience today!">
+    
+    <!-- Keywords for SEO -->
+    <meta name="keywords" content="WordPress management, open-source, free WordPress tool, Termux WordPress, Vercel WordPress, one-click deployment, WordPress security, web development">
+    
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://wordpress-self-panel.org">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wordpress-self-panel.org">
+    <meta property="og:title" content="WordPress Self Panel - Revolutionary Open-Source WordPress Management">
+    <meta property="og:description" content="Free, open-source WordPress management tool with one-click deployment, advanced security, multi-platform support.">
+    <meta property="og:image" content="https://wordpress-self-panel.org/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://wordpress-self-panel.org">
+    <meta name="twitter:title" content="WordPress Self Panel - Revolutionary Open-Source WordPress Management">
+    <meta name="twitter:description" content="Free, open-source WordPress management tool with one-click deployment, advanced security, multi-platform support.">
+    <meta name="twitter:image" content="https://wordpress-self-panel.org/twitter-image.png">
+    <meta name="twitter:creator" content="@WPSelfPanel">
+    
+    <!-- Structured JSON-LD Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "WordPress Self Panel",
+        "url": "https://wordpress-self-panel.org",
+        "description": "Revolutionary open-source WordPress management platform with one-click deployment and advanced features",
+        "applicationCategory": "Web Development Tools",
+        "operatingSystem": [
+            "Android", 
+            "Linux", 
+            "Windows", 
+            "macOS"
+        ],
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "potentialAction": {
+            "@type": "InstallAction",
+            "expectsAcceptanceOf": {
+                "@type": "Agreement",
+                "name": "Open Source MIT License"
+            }
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "WordPress Self Panel",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wordpress-self-panel.org/logo.png"
+            }
+        }
+    }
+    </script>
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom Critical CSS -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-        
         :root {
             --primary-color: #4a90e2;
             --secondary-color: #50c878;
             --background-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Inter', sans-serif;
         }
-
+        
         body {
             background: var(--background-gradient);
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden;
         }
-
+        
         .gradient-text {
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .feature-card {
-            transition: all 0.3s ease;
-            transform-origin: center;
-        }
-
-        .feature-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        
+        @media (max-width: 768px) {
+            .responsive-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .mobile-stack {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .text-responsive {
+                font-size: 1.5rem !important;
+            }
         }
     </style>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <!-- SEO & Social Media Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wordpress-self-panel.org">
-    <meta property="og:title" content="WordPress Self Panel - Revolutionary WordPress Management">
-    <meta property="og:description" content="Free, open-source WordPress management tool with one-click deployment and advanced features.">
-    <meta property="og:image" content="/og-image.png">
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "WordPress Self Panel",
-        "description": "Revolutionary open-source WordPress management platform",
-        "url": "https://wordpress-self-panel.org",
-        "applicationCategory": "Web Development Tools",
-        "operatingSystem": ["Android", "Linux", "Windows", "macOS"],
-        "offers": {
-            "@type": "Offer",
-            "price": "0"
-        }
-    }
-    </script>
 </head>
 <body class="antialiased">
     <div class="container mx-auto px-4 py-16 max-w-6xl">
         <header class="text-center mb-16">
-            <h1 class="text-5xl font-extrabold mb-4 gradient-text">
+            <h1 class="text-5xl font-extrabold mb-4 gradient-text text-responsive">
                 WordPress Self Panel
             </h1>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -88,10 +141,10 @@
         </header>
 
         <main>
-            <section class="grid md:grid-cols-3 gap-8 mb-16">
-                <div class="bg-white p-6 rounded-xl shadow-lg feature-card group">
+            <section class="grid md:grid-cols-3 gap-8 mb-16 responsive-grid">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="text-center">
-                        <i class="fas fa-rocket text-5xl text-blue-500 mb-4 group-hover:animate-bounce"></i>
+                        <i class="fas fa-rocket text-5xl text-blue-500 mb-4"></i>
                         <h2 class="text-2xl font-bold mb-3 gradient-text">Zero-Config Deployment</h2>
                         <p class="text-gray-600">
                             Launch WordPress sites instantly with our revolutionary one-click system.
@@ -99,9 +152,9 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg feature-card group">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="text-center">
-                        <i class="fas fa-shield-alt text-5xl text-green-500 mb-4 group-hover:animate-pulse"></i>
+                        <i class="fas fa-shield-alt text-5xl text-green-500 mb-4"></i>
                         <h2 class="text-2xl font-bold mb-3 gradient-text">Advanced Security</h2>
                         <p class="text-gray-600">
                             Comprehensive threat protection and real-time security monitoring.
@@ -109,9 +162,9 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-lg feature-card group">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="text-center">
-                        <i class="fas fa-tachometer-alt text-5xl text-purple-500 mb-4 group-hover:animate-spin"></i>
+                        <i class="fas fa-tachometer-alt text-5xl text-purple-500 mb-4"></i>
                         <h2 class="text-2xl font-bold mb-3 gradient-text">Performance Optimized</h2>
                         <p class="text-gray-600">
                             Lightning-fast WordPress management with minimal resource consumption.
@@ -123,7 +176,7 @@
             <section class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-6 gradient-text">Quick Installation</h2>
                 <div class="bg-gray-800 text-white p-6 rounded-xl max-w-2xl mx-auto">
-                    <code class="text-sm md:text-lg select-all">
+                    <code class="text-sm md:text-lg select-all block w-full overflow-x-auto">
                         wget -O wp-self-panel.sh https://raw.githubusercontent.com/likhonsheikhcodes/WordPressSelfPanel/main/install.sh && bash wp-self-panel.sh
                     </code>
                 </div>
@@ -131,7 +184,7 @@
 
             <section class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-8 gradient-text">Supported Platforms</h2>
-                <div class="flex justify-center space-x-8">
+                <div class="flex justify-center space-x-8 mobile-stack">
                     <div class="flex flex-col items-center">
                         <i class="fab fa-android text-6xl text-green-600"></i>
                         <span class="mt-2 font-semibold text-lg">Termux</span>
@@ -145,7 +198,7 @@
 
             <section class="text-center">
                 <h2 class="text-3xl font-bold mb-8 gradient-text">Join Our Community</h2>
-                <div class="flex justify-center space-x-6">
+                <div class="flex justify-center space-x-6 mobile-stack">
                     <a href="https://github.com/likhonsheikhcodes" target="_blank" class="text-5xl hover:text-gray-700 transition-colors">
                         <i class="fab fa-github"></i>
                     </a>
@@ -164,8 +217,30 @@
         </footer>
     </div>
 
-    <!-- Optional Performance & Analytics Script -->
+    <!-- Performance & Analytics Script -->
     <script>
+        // Lazy Load Images
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+            
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("lazy");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+
         // Performance Tracking
         window.addEventListener('load', () => {
             if ('performance' in window) {
@@ -174,7 +249,7 @@
             }
         });
 
-        // Optional Basic Analytics (replace with your tracking ID)
+        // Optional Basic Analytics
         if (window.location.hostname !== 'localhost') {
             (function(w,d,s,l,i){
                 w[l]=w[l]||[];w[l].push({'gtag.start':new Date().getTime(),event:'gtag.js'});
